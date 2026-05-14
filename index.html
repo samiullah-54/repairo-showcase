@@ -258,11 +258,9 @@
 
     <script>
         function showTab(role) {
-            // Hide sections
             document.querySelectorAll('.role-section').forEach(sec => sec.classList.add('hidden'));
             document.getElementById('tab-' + role).classList.remove('hidden');
 
-            // Toggle button styles
             document.querySelectorAll('nav button').forEach(btn => {
                 btn.classList.remove('tab-active');
                 btn.classList.add('text-slate-400');
@@ -270,7 +268,6 @@
             document.getElementById('btn-' + role).classList.add('tab-active');
             document.getElementById('btn-' + role).classList.remove('text-slate-400');
             
-            // Scroll to top of Main
             window.scrollTo({ top: document.querySelector('nav').offsetTop - 40, behavior: 'smooth' });
         }
     </script>
